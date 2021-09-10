@@ -112,7 +112,7 @@ function Start() {
 }
 
 function End(){
-    window.location.href = 'http://localhost:2000/test/end_of_workout.html'; //遷移
+    window.location.href = 'https://koukionodera.github.io/Website1/end_of_workout.html'; //遷移
     /*
     記録処理をする
     */
