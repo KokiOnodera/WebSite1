@@ -24,4 +24,4 @@ function csv_array(data) {
     });
     output_svg.innerHTML = insertElement; // 表示
 }
-csv_data('http://localhost:2000/test/subject.csv'); // csvのパス
+csv_data('https://koukionodera.github.io/WebSite1/subject.csv'); // csvのパス
