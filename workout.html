@@ -1,0 +1,187 @@
+<!--筋トレWebアプリケーション
+    Webアプリケーションの勉強ついでに作ってみる-->
+
+<!DOCTYPE html>
+<html>
+    <head class="header">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&amp;display=swap" rel="stylesheet">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+            <div class="container d-flex flex-column flex-md-row justify-content-between">
+              <a class="py-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+              </a>
+              <!-- <a class="py-2 d-none d-md-inline-block" href="#">Tour</a> -->
+              <a href="subject_list.html" class="py-2 d-none d-md-inline-block">筋トレ項目一覧</a>
+              <!-- <a class="py-2 d-none d-md-inline-block" href="#">Product</a> -->
+              <a class="py-2 d-none d-md-inline-block" href="#">プロダクト</a>
+              <!-- <a class="py-2 d-none d-md-inline-block" href="#">Features</a> -->
+              <a class="py-2 d-none d-md-inline-block" href="#">特徴</a>
+              <!-- <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a> -->
+              <a class="py-2 d-none d-md-inline-block" href="#">エンタープライズ</a>
+              <!-- <a class="py-2 d-none d-md-inline-block" href="#">Support</a> -->
+              <a class="py-2 d-none d-md-inline-block" href="#">サポート</a>
+              <!-- <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a> -->
+              <a class="py-2 d-none d-md-inline-block" href="#">価格</a>
+              <!-- <a class="py-2 d-none d-md-inline-block" href="#">Cart</a> -->
+              <a class="py-2 d-none d-md-inline-block" href="#">カート</a>
+            </div>
+        <title>WorkOut</title>
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <p class="title">WorkOutWebアプリケーション
+        </div>
+    </head>
+    <body>
+        <div class="container">
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+        </div>
+            <div class="my-3 py-3">
+        <!-- <p class="lead">And an even wittier subheading.</p> -->
+            種目選択
+            <select id ="subject_select">
+            <option>ランダム</option>
+            </select>
+            </div>
+            <input type="button" class="button button-border" value="スタート" onclick="Start();" id="str"></button>
+            &emsp;
+            <input type="button" class="button button-border" value="終了" onclick="End();"></button>
+            <br>
+            <h1><div id="subject_name" class="badge badge-secondary"></div></h1>
+            <p id="sentence"></p>
+            <div id="timer"></div>
+
+            <!--ここに画像-->
+            <img id="mypic" src="" width="200" height="200" style="display:none">
+
+            <!--項目説明-->
+            <div class="main" id="explanation">ここに説明が入ります</div>
+
+            <div id="kcal">kcal</div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-sm">
+                        <nav>
+                            <ul>
+                                <li><h3><a href="administrator.html" class="badge badge-primary">管理者画面</a></h3></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-sm">
+                        <nav>
+                            <ul>
+                                <li><h3><a href="administrator.html" class="badge badge-primary">管理者画面</a></h3></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-sm">
+                        <nav>
+                            <ul>
+                                <li><h3><a href="administrator.html" class="badge badge-primary">管理者画面</a></h3></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+        <script type="text/javascript" src="DataOutput.js"></script>
+</html>
+
+<style>
+    @media screen and (min-width: 481px){ 
+
+    }
+    .title{
+        top: 89px;
+        left: 103px;
+        width: 721px;
+        height: 75px;
+        text-align: left;
+        font: normal normal normal 40px/65px Meiryo;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+        display: inline;
+    }
+
+    .subject_list_link{
+        top: 112px;
+        left: 960px;
+        width: 140px;
+        height: 30px;
+        text-align: left;
+        font: normal normal normal 20px/30px Meiryo;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+        display: inline;
+    }
+
+    .button{
+        top: 231px;
+        left: 109px;
+        width: 156px;
+        height: 80px;
+        opacity: 1;
+        border: 2px solid #000;
+        border-radius: 0;
+        background: #fff;
+        font: normal normal normal 31px/47px Meiryo;
+    }
+    .button-border:hover{
+        color: #fff;
+        background: #000;
+    }
+
+    .main{
+        top: 540px;
+        left: 109px;
+        width: 644px;
+        height: 540px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        opacity: 1;
+    }
+
+    .svg-wrapper {
+        margin-top: 0;
+        position: relative;
+        width: 150px;
+        /*make sure to use same height/width as in the html*/
+        height: 40px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+
+    .header{
+        min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+        position: relative;/* ←相対位置 */
+        padding-bottom: 60px; /* ←フッターの高さを指定 */
+        box-sizing: border-box;
+        /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+    }
+
+    .sticky-header {
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+    }
+
+
+    .footer {
+        width: 100%;
+        background-color: #89c7de;
+        color: #fff;
+        text-align: center;
+        padding: 30px 0;
+
+        position: absolute;/*←絶対位置*/
+        bottom: 0; /*下に固定*/
+    }
+
+</style>
