@@ -118,4 +118,4 @@ function End(){
     */
 }
 
-csv_data('http://localhost:2000/test/subject.csv'); // csvのパス
+csv_data('https://koukionodera.github.io/WebSite1/subject.csv'); // csvのパス
