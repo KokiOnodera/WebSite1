@@ -23,7 +23,7 @@ if (!empty($subject)&&!empty($time)&&!empty($count)&&!empty($kcal)){
       // ファイルを閉じます。
       fclose($f);
       echo '成功しました';
-      $link_address = 'workout.html';
+      $link_address = 'index.html';
       echo "<a href='".$link_address."'>アプリケーションに戻る</a>";
 }else{
     //エラー
